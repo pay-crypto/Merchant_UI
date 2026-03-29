@@ -9,7 +9,6 @@ import { formatDateTime } from '../utils';
 export const Settings: React.FC = () => {
   const { profile, toggleDarkMode } = useAppStore();
   const { copy, copied } = useCopy();
-  const [showApiSecrets, setShowApiSecrets] = useState<{ [key: string]: boolean }>({});
   const [showWallet, setShowWallet] = useState(false);
 
   return (

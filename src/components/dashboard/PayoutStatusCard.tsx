@@ -8,11 +8,7 @@ interface PayoutStatusCardProps {
   successCount: number;
 }
 
-export const PayoutStatusCard: React.FC<PayoutStatusCardProps> = ({
-  totalPayout,
-  pendingCount,
-  successCount,
-}) => {
+export const PayoutStatusCard: React.FC<PayoutStatusCardProps> = () => {
   return (
     <Card className="bg-white">
       <CardHeader className="pb-4">

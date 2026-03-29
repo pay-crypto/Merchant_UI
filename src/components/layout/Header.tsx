@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Bell, Settings, LogOut, ChevronDown } from 'lucide-react';
+import { Bell, Settings, LogOut, ChevronDown } from 'lucide-react';
 import { useAppStore } from '../../store';
 import { Button } from '../ui/Button';
 import { Avatar } from './Avatar';
@@ -13,10 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
-  const handleMenuClick = () => {
-    toggleSidebar();
-    onMenuClick?.();
-  };
+  const handleMenuClick = () => toggleSidebar();
 
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white">

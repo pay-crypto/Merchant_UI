@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header, Sidebar, Footer } from './components/layout';
 import { Dashboard } from './pages/Dashboard';

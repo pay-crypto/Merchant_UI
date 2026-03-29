@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, TrendingUp, AlertCircle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 import { Card, CardContent } from '../ui/Card';
 import { Skeleton } from '../ui/Skeleton';
 
@@ -16,12 +16,7 @@ interface SummaryCardsProps {
   loading?: boolean;
 }
 
-const colorClasses = {
-  blue: 'bg-blue-50 text-blue-600',
-  green: 'bg-green-50 text-green-600',
-  orange: 'bg-orange-50 text-orange-600',
-  red: 'bg-red-50 text-red-600',
-};
+
 
 export const SummaryCards: React.FC<SummaryCardsProps> = ({
   metrics,
@@ -29,9 +24,7 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {metrics.map((metric, index) => {
-        const Icon = metric.icon;
-        return (
+      {metrics.map((metric, index) => (
           <Card key={index} className="overflow-hidden bg-white">
             <CardContent className="pt-6">
               {loading ? (
@@ -57,8 +50,7 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({
               )}
             </CardContent>
           </Card>
-        );
-      })}
+      ))}
     </div>
   );
 };

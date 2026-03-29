@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Info, ChevronDown } from 'lucide-react';
+import { Info } from 'lucide-react';
 import { Transaction } from '../../types';
 import {
   Card,
@@ -15,7 +15,6 @@ interface TransactionTableProps {
 
 export const TransactionTable: React.FC<TransactionTableProps> = ({
   transactions,
-  loading = false,
 }) => {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [filterStatus, setFilterStatus] = useState('All');
