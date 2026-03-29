@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './Button';
-import { cn } from '../utils/cn';
+import { cn } from '../../utils/cn';
 
 export interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {}
 

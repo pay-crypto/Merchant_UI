@@ -23,16 +23,16 @@ const generateTransactions = (): Transaction[] => {
     'BEP20',
   ];
   const customers = [
-    'Apple Inc.',
-    'Microsoft Corp',
-    'Google LLC',
-    'Amazon.com',
-    'Tesla Inc.',
-    'Meta Platforms',
-    'Netflix Inc.',
-    'Adobe Corp',
-    'Nvidia Inc.',
-    'Intel Corp',
+    'John Smith',
+    'Emily Davis',
+    'Michael Lee',
+    'Sarah Johnson',
+    'David Wilson',
+    'Jessica Brown',
+    'Robert Taylor',
+    'Amanda Miller',
+    'James Wilson',
+    'Lisa Anderson',
   ];
 
   const transactions: Transaction[] = [];

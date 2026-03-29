@@ -34,7 +34,7 @@ export const Sidebar: React.FC = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 z-40 h-screen w-64 bg-white border-r border-slate-200 transition-transform duration-300 ease-in-out pt-20 md:pt-0 md:translate-x-0 ${
+        className={`fixed md:static left-0 top-16 z-40 h-screen md:h-auto w-64 bg-white border-r border-slate-200 transition-transform duration-300 ease-in-out md:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -73,7 +73,7 @@ export const Sidebar: React.FC = () => {
         </nav>
 
         {/* Footer Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200">
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200 hidden md:block">
           <div className="bg-indigo-50 rounded-lg p-3">
             <p className="text-xs font-semibold text-indigo-900">Tip</p>
             <p className="text-xs text-indigo-700 mt-1">

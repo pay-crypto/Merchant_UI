@@ -1,13 +1,12 @@
 import React from 'react';
-import { ArrowUpRight, DollarSign, TrendingUp, AlertCircle } from 'lucide-react';
+import { DollarSign, TrendingUp, AlertCircle } from 'lucide-react';
 import { Card, CardContent } from '../ui/Card';
 import { Skeleton } from '../ui/Skeleton';
-import { formatCurrency } from '../../utils';
 
 interface SummaryMetric {
   label: string;
   value: string | number;
-  change?: string;
+  subValue?: string;
   icon: typeof DollarSign;
   color: 'blue' | 'green' | 'orange' | 'red';
 }
@@ -29,11 +28,11 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({
   loading = false,
 }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {metrics.map((metric, index) => {
         const Icon = metric.icon;
         return (
-          <Card key={index} className="overflow-hidden">
+          <Card key={index} className="overflow-hidden bg-white">
             <CardContent className="pt-6">
               {loading ? (
                 <>
@@ -43,23 +42,15 @@ export const SummaryCards: React.FC<SummaryCardsProps> = ({
                 </>
               ) : (
                 <>
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-sm font-medium text-slate-600">
-                      {metric.label}
-                    </p>
-                    <div
-                      className={`p-2 rounded-lg ${colorClasses[metric.color]}`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </div>
-                  </div>
+                  <p className="text-sm font-medium text-slate-600 mb-4">
+                    {metric.label}
+                  </p>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">
                     {metric.value}
                   </h3>
-                  {metric.change && (
-                    <p className="text-xs text-green-600 flex items-center gap-1">
-                      <ArrowUpRight className="w-3 h-3" />
-                      {metric.change}
+                  {metric.subValue && (
+                    <p className="text-xs text-slate-500 mb-4">
+                      {metric.subValue}
                     </p>
                   )}
                 </>

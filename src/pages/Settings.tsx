@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, Copy, Check, Key, Webhook, Bell } from 'lucide-react';
 import { useAppStore } from '../store';
-import { Card, CardContent, CardHeader, CardTitle, Button, Input } from '../ui/index';
+import { Card, CardContent, CardHeader, CardTitle, Button, Input } from '../components/ui';
 import { useCopy } from '../hooks';
 import { mockApiKeys } from '../data/mockData';
 import { formatDateTime } from '../utils';
