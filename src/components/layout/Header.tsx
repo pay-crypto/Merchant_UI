@@ -4,16 +4,12 @@ import { useAppStore } from '../../store';
 import { Button } from '../ui/Button';
 import { Avatar } from './Avatar';
 
-interface HeaderProps {
-  onMenuClick?: () => void;
-}
+interface HeaderProps {}
 
-export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+export const Header: React.FC<HeaderProps> = () => {
   const { toggleSidebar, profile, notifications, unreadCount } = useAppStore();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-
-  const handleMenuClick = () => toggleSidebar();
 
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white">
