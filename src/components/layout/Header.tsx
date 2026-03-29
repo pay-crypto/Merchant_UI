@@ -7,7 +7,7 @@ import { Avatar } from './Avatar';
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
-  const { toggleSidebar, profile, notifications, unreadCount } = useAppStore();
+  const { profile, notifications, unreadCount } = useAppStore();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
